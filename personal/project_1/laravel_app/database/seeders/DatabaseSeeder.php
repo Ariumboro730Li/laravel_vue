@@ -11,8 +11,13 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        ini_set("memory_limit", -1);
+        $this->call([
+            TestApiSeeder::class,
+            SearchesSeeder::class,
+        ]);
     }
 }
