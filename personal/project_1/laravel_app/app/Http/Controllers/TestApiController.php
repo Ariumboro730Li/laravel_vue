@@ -9,6 +9,7 @@ use Carbon\Carbon;
 class TestApiController extends Controller
 {
     public function index(request $request) {
+        $request->input("page", rand(1, 100));
         $something = $request->input("something");
         if ($something != null) {
             $source = TestApi::where("name", "like", "%$something%")->orWhere("profession", "like", "%$something%")->paginate(10);

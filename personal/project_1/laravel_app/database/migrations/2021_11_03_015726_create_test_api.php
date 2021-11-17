@@ -13,10 +13,13 @@ class CreateTestApi extends Migration
      */
     public function up()
     {
-        Schema::create('test_api', function (Blueprint $table) {
+        Schema::create('test_apis', function (Blueprint $table) {
             $table->id();
             $table->string("name")->nullable();
             $table->string("profession")->nullable();
+            $table->bigInteger("salary")->nullable();
+            $table->string("company")->nullable();
+            $table->string("address")->nullable();
             $table->timestamps();
         });
     }

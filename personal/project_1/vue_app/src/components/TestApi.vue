@@ -2,7 +2,7 @@
     <div class="container mt-2">
         <h1 class="text-center">Hello World BROOOOOO</h1>
         <a data-toggle="modal" data-target="#modelId"
-         class="btn btn-primary shadow" href="#" role="button">New Data</a>
+         class="btn btn-primary shadow" href="#" role="button">New Data </a>
         <div class="form-group mt-2">
           <input type="text" class="form-control shadow" @change="finderData" ref="finderInput" aria-describedby="helpId" placeholder="Find Someone or Professions">
         </div>
@@ -11,7 +11,8 @@
                 <div class="card text-left shadow">
                     <div class="card-body">
                         <h4 class="card-title">{{dataAll.name}}</h4>
-                        <p class="card-text">{{dataAll.profession}}</p>
+                        <p class="card-text">{{dataAll.profession}} at {{dataAll.company}}</p>
+                        <p class="card-text">{{dataAll.address}}</p>
                         <a v-on:click="deleteData(dataAll.id)" class="btn btn-sm btn-danger" href="#" role="button">Delete</a>
                         -
                         <a v-on:click="updateData(dataAll.id)" data-toggle="modal" data-target="#modelId" class="btn btn-sm btn-info" href="#" role="button">Update</a>
